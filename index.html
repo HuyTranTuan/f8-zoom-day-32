@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Control</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header></header>
+    
+    <div class="wrapper">
+        <aside class="sidebar-tool">
+            <ul class="sidebar-tool-header">
+                <a href="!#">
+                    <li class="sidebar-tool-item active">
+                        <i class="fa-regular fa-file"></i>
+                    </li>
+                </a>
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                </a>
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </li>
+                </a>
+                <a href="!#">
+                    <li class="sidebar-debug">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-bug"></i>
+                    </li>
+                </a>
+        
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </li>
+                </a>
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-microscope"></i>
+                    </li>
+                </a>
+            </ul>
+        
+            <ul class="sidebar-tool-footer">
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </li>
+                </a>
+                <a href="!#">
+                    <li class="sidebar-tool-item">
+                        <i class="fa-solid fa-gear"></i>
+                    </li>
+                </a>
+            </ul>
+        </aside>
+        <aside class="sidebar" id="sidebar">
+            <div id="resize"></div>
+            <div class="explorer">
+                <div class="explorer-title">
+                    <span>
+                        EXPLORER
+                    </span>
+                    <span>
+                        . . .
+                    </span>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">
+                        <div class="header-title">
+                            <i class="fa-solid fa-chevron-right active"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <h2 class="">OPEN EDITORS</h2>
+                        </div>
+                        <ul class="sidebar-child-list open-list">
+                            
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <div class="header-title">
+                            <i class="fa-solid fa-chevron-right active"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <h2 class="">F8-ZOOM-DAY-32</h2>
+                        </div>
+                        <ul class="sidebar-child-list folder-list">
+                            
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <div class="header-title">
+                            <i class="fa-solid fa-chevron-right active"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <h2 class="">OUTLINE</h2>
+                        </div>
+                        <ul class="sidebar-child-list outline-list">
+                            
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <div class="header-title">
+                            <i class="fa-solid fa-chevron-right active"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <h2 class="">TIMELINE</h2>
+                        </div>
+                        <ul class="sidebar-child-list timeline-list">
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="vscode-logo"></div>
+            <div class="shortcuts">
+                <div>Show All Commands <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></div>
+                <div>Go to File <kbd>Ctrl</kbd> + <kbd>P</kbd></div>
+                <div>Toggle Terminal <kbd>Ctrl</kbd> + <kbd>`</kbd></div>
+                <div>Start Debugging <kbd>F5</kbd></div>
+            </div>
+        </main>
+
+        <div id="renameModal" class="modal">
+            <div class="modal-container">
+                <!-- Modal content here -->
+                <span class="modal-title">RENAME FILE</span>
+                <input type="text" class="input-rename">
+                <div class="modal-content">
+                    <span class="action-button rename-btn">Rename</span>
+                    <span class="close-button">Cancle</span>
+                </div>
+            </div>
+        </div>
+        <div id="deleteModal" class="modal">
+            <div class="modal-container">
+                <!-- Modal content here -->
+                <span class="modal-title">DELETE FILE</span>
+                <div class="modal-content">
+                    <span class="action-button delete-btn">Delete</span>
+                    <span class="close-button">Cancle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./helper.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
